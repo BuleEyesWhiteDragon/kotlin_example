@@ -2,5 +2,12 @@ language: java
 jdk:
     - oraclejdk8
 
+env:
+    global:
+        - secure: "Y/EpA7leqn3TpmvwF5P7aAgFYiAfv+cXjHjTsbRUc4UBXbrMHwR+94m4zddZuff0xK/FRs++a/DzLj24OyZ8SCMxpca5/Hysso5eFZfChLGT7+sLlAztFHSO0GPUq7fXhuf2kZ7kyR13PxX4tbVWRNtOPlelIeEbUu1eRgF9dAkwYeK/Q8aT1UOPu7AvL+4sOTL2h5KM0RybZVav1yu0iybatHJGA9dKWimeqc5jkG/j1wrlWI+QHVmtOMrX4hp0y/xMxx0mP8+cvvlXIHKzDTkT2fYomWgLkZdGJLbP2I9oeduqBOM8e7IQz6By2WMgaoFHay8SgIwK3j1dbMUbbBTvKUUwEYIosNFXSmfXUrOncnAGHiozCl7/+TsMo02xD9cWSFhI8B3ga/UJF959Rlkhmfr2cctks4C1+n1l8VQA5C7hxKuMIeXVo0/8ogGh1SDqBgddi7R4ImmdSlYdomnmqQLMiSKboBbP1bE2B4y+Udmvf+4gc8hcz07/UWHAvc4kiNWdOGttykxinLR/4xvItnFeXgjOq57xeLge/+i/+vYwRVbpmLFdlIXIp4Sqib8PlDdYtQMOH5Qda5e1ho+7LaIRjwk5GJdvZrqKVPg6lgJeKgZMoGFELRT8OrM8oTx6nnY+muQjyGZjZWbZXwz2KSnwYriTLQqqP9jCgDw="
+
 script:
     - gradle build
+
+after_success:
+    - gradle jacocoTestReport coveralls
