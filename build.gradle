@@ -40,3 +40,7 @@ jacocoTestReport{
     }
 }
 
+// coveralls にソースファイルの置き場を教える．
+coveralls {
+    sourceDirs += ['src/main/kotlin']
+}
