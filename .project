@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>kotlin_example</name>
+	<name>empirical_kotlin_example</name>
 	<comment>kotlin_example</comment>
 	<projects>
 	</projects>
 	<buildSpec>
 		<buildCommand>
 			<name>org.jetbrains.kotlin.ui.kotlinBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.buildship.core.gradleprojectbuilder</name>
 			<arguments>
 			</arguments>
 		</buildCommand>
@@ -19,12 +24,13 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.jetbrains.kotlin.core.kotlinNature</nature>
+		<nature>org.eclipse.buildship.core.gradleprojectnature</nature>
 	</natures>
 	<linkedResources>
 		<link>
 			<name>kotlin_bin</name>
 			<type>2</type>
-			<locationURI>org.jetbrains.kotlin.core.filesystem:/kotlin_example/kotlin_bin</locationURI>
+			<locationURI>org.jetbrains.kotlin.core.filesystem:/empirical_kotlin_example/kotlin_bin</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>
