@@ -10,4 +10,4 @@ script:
     - gradle build
 
 after_success:
-    - gradle test jacocoTestReport coveralls
+    - gradle -DrepoToken=${COVERALLS_TOKEN} test jacocoTestReport coveralls
